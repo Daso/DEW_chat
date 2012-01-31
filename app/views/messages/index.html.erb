@@ -1,0 +1,24 @@
+<h1><%= link_to "Chat Increible", root_path %></h1>
+<ul>
+<% @messages.each do |message| %>
+  <li>
+	<%= message.name %> dijo <%= message.content %>
+  </li>
+<% end %>
+</ul>
+<br />
+
+
+<%= form_for(@message) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
