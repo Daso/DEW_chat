@@ -8,7 +8,7 @@ class Message < ActiveRecord::Base
 
   def send_to_pusher
     logger.info "Hi?"
-    Pusher['cool_chat'].trigger("message:create",self.to_json)  
+    Pusher['demoChat'].trigger("message:create",self.to_json)  
   end
 
 end
