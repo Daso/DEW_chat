@@ -2,7 +2,7 @@
 <ul id="chat_container">
 <% @messages.each do |message| %>
   <li>
-	<%= message.user %> dijo <%= message.content %>
+	<%= message.name %> dijo <%= message.content %>
   </li>
 <% end %>
 </ul>
@@ -11,8 +11,8 @@
 
 <%= form_for(Message.new, :remote => true) do |f| %>
   <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :content %><br />
@@ -35,7 +35,7 @@
     var channel = pusher.subscribe('demoChat');
     channel.bind('message:create', function(data) {
       var message = "<li id='message_" + data.id +"' >" 
-         message += data.user + ": " + data.content
+         message += data.name + ": " + data.content
          message += "</li>"
 
       $("#chat_container").append(message);
