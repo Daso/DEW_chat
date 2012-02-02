@@ -22,3 +22,27 @@
     <%= f.submit %>
   </div>
 <% end %>
+ <script type="text/javascript">
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) window.console.log(message);
+    };
+
+    // Flash fallback logging - don't include this in production
+    WEB_SOCKET_DEBUG = true;
+
+    var pusher = new Pusher('1ecb3ae402bda1983f91');
+    var channel = pusher.subscribe('cool_chat');
+    channel.bind('message:create', function(data) {
+      var message = "<li id='message_" + data.id +"' >" 
+         message += data.user + ": " + data.content
+         message += "</li>"
+
+      $("#chat_container").append(message);
+      scrollToLastElement();
+      $("#message_content").val("");
+      $("#message_content").focus();
+      updateContentForOembed("#message_" + data.id);
+  
+    });
+  </script>
