@@ -31,8 +31,8 @@
     // Flash fallback logging - don't include this in production
     WEB_SOCKET_DEBUG = true;
 
-    var pusher = new Pusher('1ecb3ae402bda1983f91');
-    var channel = pusher.subscribe('cool_chat');
+    var pusher = new Pusher('c0b97835ccce8d568a10');
+    var channel = pusher.subscribe('demoChat');
     channel.bind('message:create', function(data) {
       var message = "<li id='message_" + data.id +"' >" 
          message += data.user + ": " + data.content
