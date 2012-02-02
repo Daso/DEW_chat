@@ -2,7 +2,7 @@
 <ul id="chat_container">
 <% @messages.each do |message| %>
   <li>
-	<%= message.name %> dijo <%= message.content %>
+	<%= message.user %> dijo <%= message.content %>
   </li>
 <% end %>
 </ul>
@@ -11,8 +11,8 @@
 
 <%= form_for(Message.new, :remote => true) do |f| %>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
   </div>
   <div class="field">
     <%= f.label :content %><br />
