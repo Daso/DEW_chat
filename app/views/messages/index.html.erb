@@ -1,5 +1,5 @@
 <h1><%= link_to "Chat Increible", root_path %></h1>
-<ul>
+<ul id="chat_container">
 <% @messages.each do |message| %>
   <li>
 	<%= message.name %> dijo <%= message.content %>
