@@ -8,16 +8,25 @@
 </ul>
 <br />
 
+<div class="ui-resizable">
+   <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-e"></div>
+   <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-s"></div>
+   <div unselectable="on" style="z-index: 1001; -moz-user-select: none;" class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div>
+</div>
 
 <%= form_for(Message.new, :remote => true) do |f| %>
-  <div class="field">
+  <div class="clearfix">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :content %><br />
+  <div class="ui-resizable">
+   <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-e"></div>
+   <div style="-moz-user-select: none;" unselectable="on" class="ui-resizable-handle ui-resizable-s"></div>
+   <div unselectable="on" style="z-index: 1001; -moz-user-select: none;" class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div>
+    <%= f.label :mensaje %><br />
     <%= f.text_area :content %>
   </div>
+  <input type="text" name="date" id="date" />
   <div class="actions">
     <%= f.submit %>
   </div>
@@ -44,3 +53,4 @@
   
     });
   </script>
+  

@@ -9,6 +9,8 @@ gem 'rails', '3.2.0'
 
 gem 'pusher'
 
+#gem 'twitter-bootstrap-rails', :group => :assets
+
 group :production do
   gem 'pg'  
 end

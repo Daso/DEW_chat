@@ -1,0 +1,177 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<title>Example of Form with twitter bootstrap</title> 
+<meta name="description" content="Creating a Form with Twitter Bootstrap">
+<link href="/assets/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body>
+<form>
+<fieldset>
+<legend>An example Form with Twitter Bootstrap</legend>
+<div class="clearfix">
+<label for="">Name</label>
+<div class="input">
+<input type="text" size="30" name="xlInput" id="xlInput" class="xlarge">
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label for="">Favorite Programming Language</label>
+<div class="input">
+<select>
+<option>PHP</option>
+<option>ASP</option>
+<option>JSP</option>
+<option>Python</option>
+<option>CF</option>
+</select>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label for="">Rate your Communication skil</label>
+<div class="input">
+<select class="medium">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label>You are visiting</label>
+<div class="input">
+<span class="uneditable-input">w3resource</span>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label for="disabledInput">You will work with</label>
+<div class="input">
+<input type="text" disabled="" placeholder="w3resource" size="30" name="disabledInput" id="disabledInput" class="xlarge disabled">
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix error">
+<label for="xlInput">About Yourself</label>
+<div class="input">
+<input type="text" size="30" name="xlInput" id="xlInput" class="xlarge error">
+</div>
+</div> <!-- /clearfix -->
+</fieldset>
+<fieldset>
+<div class="clearfix">
+<label for="prependedInput">Twitter ID</label>
+<div class="input">
+<div class="input-prepend">
+<span class="add-on">@</span>
+<input type="text" size="16" name="prependedInput" id="prependedInput" class="medium">
+</div>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label for="prependedInput2">Like Twitter Bootstrap?</label>
+<div class="input">
+<div class="input-prepend">
+<label class="add-on"><input type="checkbox" value="" id="" name=""></label>
+<input type="text" size="16" name="prependedInput2" id="prependedInput2" class="mini">
+</div>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label for="appendedInput">Like HTML Blierplate?</label>
+<div class="input">
+<div class="input-append">
+<input type="text" size="16" name="appendedInput" id="appendedInput" class="mini">
+<label class="add-on active"><input type="checkbox" checked="checked" value="" id="" name=""></label>
+</div>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label for="xlInput">Update Avatar</label>
+<div class="input">
+<input type="file" name="fileInput" id="fileInput" class="input-file">
+</div>
+</div> <!-- /clearfix -->
+</fieldset>
+<fieldset>
+<div class="clearfix">
+<label id="optionsCheckboxes">List of Options</label>
+<div class="input">
+<ul class="inputs-list">
+<li>
+<label>
+<input type="checkbox" value="option1" name="optionsCheckboxes">
+<span>Option one is this and that&mdash;be sure to include why it’s great</span>
+</label>
+</li>
+<li>
+<label>
+<input type="checkbox" value="option2" name="optionsCheckboxes">
+<span>Option two can also be checked and included in form results</span>
+</label>
+</li>
+<li>
+<label>
+<input type="checkbox" value="option2" name="optionsCheckboxes">
+<span>Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form 
+results</span>
+</label>
+</li>
+<li>
+<label class="disabled">
+<input type="checkbox" disabled="" value="option2" name="optionsCheckboxes">
+<span>Option four cannot be checked as it is disabled.</span>
+</label>
+</li>
+</ul>
+<span class="help-block">
+<strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.
+</span>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label>Select a Date Range for your last job duration</label>
+<div class="input">
+<div class="inline-inputs">
+<input type="text" value="" class="small">
+<input type="text" value="" class="mini">
+to <input type="text" value="" class="small">
+<input type="text" value="" class="mini">
+</div>
+</div>
+</div> <!-- /clearfix -->
+<div class="clearfix">
+<label for="textarea">Job Profile</label>
+<div class="input">
+<textarea name="textarea" id="textarea" class="xxlarge"></textarea>
+<span class="help-block">
+Write your last job profile. </span>
+</div> </div> <!-- /clearfix -->
+<div class="clearfix">
+<label id="optionsRadio">List of Options</label>
+<div class="input">
+<ul class="inputs-list">
+<li>
+<label>
+<input type="checkbox" value="option1" name="optionsCheckboxes">
+<span>Select if you want to be relocated</span>
+</label>
+</li>
+<li>
+<label>
+<input type="checkbox" value="option2" name="optionsCheckboxes">
+<span>Select if you are looking for a contract job only</span>
+</label>
+</li>
+</ul>
+</div>
+</div> <!-- /clearfix -->
+<div class="actions">
+<button class="btn primary" type="submit">Save Changes</button>&nbsp;<button class="btn"
+type="reset">Cancel</button>
+</div>
+</fieldset>
+</form>
+</body>
+</html>
